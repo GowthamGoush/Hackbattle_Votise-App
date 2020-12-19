@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Votise</string>
+    <string name="tab_name1">Candidates</string>
+    <string name="tab_name2">Stats</string>
+    <string name="tab_name3">Feed</string>
+    <string name="tab_name4">Booths</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/candidateCard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@null">
+
+        <RelativeLayout
+            android:id="@+id/candidateCard2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/candidateCard1"
+            android:background="@drawable/bottom_candidate_card"
+            android:layout_marginTop="-16dp"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/candidateInfo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="INFO 1"
+                android:textSize="12dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/candidateInfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="INFO 2"
+                android:textSize="12dp"
+                android:layout_below="@+id/candidateInfo1"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/candidateInfo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="INFO 3"
+                android:textSize="12dp"
+                android:layout_below="@+id/candidateInfo2"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/candidateCard1"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/candidateImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_stats"/>
+
+                <TextView
+                    android:id="@+id/candidateName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="NAME"
+                    android:layout_below="@+id/candidateImage"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/candidateParty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="PARTY"
+                    android:layout_below="@+id/candidateName"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/candidatePosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="POSITION"
+                    android:layout_below="@+id/candidateParty"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
