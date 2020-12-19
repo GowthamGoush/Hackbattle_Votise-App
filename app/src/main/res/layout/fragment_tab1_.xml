@@ -5,15 +5,95 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Tab1_Fragment"
-    android:background="@android:color/holo_purple">
+    android:background="@android:color/background_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/candidateRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="50dp"
         />
 
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/powerSpinner_States"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:background="@color/md_orange_200"
+        android:gravity="center"
+        android:hint="State"
+        android:padding="10dp"
+        android:textColor="@color/white_93"
+        android:textColorHint="@color/white_70"
+        android:textSize="14.5sp"
+        app:spinner_arrow_gravity="end"
+        app:spinner_arrow_padding="8dp"
+        app:spinner_divider_color="@color/white_70"
+        app:spinner_divider_show="true"
+        app:spinner_divider_size="0.4dp"
+        app:spinner_item_array="@array/states"
+        app:spinner_popup_animation="fade"
+        app:spinner_popup_background="@color/background800"
+        app:spinner_popup_elevation="14dp"
+        android:layout_above="@+id/candidateRecyclerView"
+        android:layout_marginBottom="-280dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/powerSpinner_District"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/md_orange_200"
+        android:gravity="center"
+        android:hint="District"
+        android:padding="10dp"
+        android:textColor="@color/white_93"
+        android:textColorHint="@color/white_70"
+        android:textSize="14.5sp"
+        app:spinner_arrow_gravity="end"
+        app:spinner_arrow_padding="8dp"
+        app:spinner_divider_color="@color/white_70"
+        app:spinner_divider_show="true"
+        app:spinner_divider_size="0.4dp"
+        app:spinner_item_array="@array/districts"
+        app:spinner_popup_animation="fade"
+        app:spinner_popup_background="@color/background800"
+        app:spinner_popup_elevation="14dp"
+        android:layout_toRightOf="@+id/powerSpinner_States"
+        android:layout_toLeftOf="@+id/powerSpinner_Constituency"
+        android:layout_above="@+id/candidateRecyclerView"
+        android:layout_marginBottom="-280dp"
+        />
+
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/powerSpinner_Constituency"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@color/md_orange_200"
+        android:gravity="center"
+        android:hint="Constituency"
+        android:padding="10dp"
+        android:textColor="@color/white_93"
+        android:textColorHint="@color/white_70"
+        android:textSize="14.5sp"
+        app:spinner_arrow_gravity="end"
+        app:spinner_arrow_padding="8dp"
+        app:spinner_divider_color="@color/white_70"
+        app:spinner_divider_show="true"
+        app:spinner_divider_size="0.4dp"
+        app:spinner_item_array="@array/constituency"
+        app:spinner_popup_animation="fade"
+        app:spinner_popup_background="@color/background800"
+        app:spinner_popup_elevation="14dp"
+        android:layout_above="@+id/candidateRecyclerView"
+        android:layout_marginBottom="-280dp"
+        android:layout_alignParentRight="true"
+        />
+    </RelativeLayout>
 </FrameLayout>

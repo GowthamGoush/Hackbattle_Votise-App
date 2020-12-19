@@ -1,19 +1,28 @@
 package com.example.votise;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.text.Layout;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.skydoves.powerspinner.OnSpinnerItemSelectedListener;
+import com.skydoves.powerspinner.PowerSpinnerView;
+import com.skydoves.powerspinner.SpinnerAnimation;
 
 import java.util.ArrayList;
 
@@ -40,6 +49,7 @@ public class Tab1_Fragment extends Fragment {
     private RecyclerView recyclerView;
     private Recycler_Adapter_Candidate adapter;
     private ArrayList<Candidate_Profile> Candidates;
+    private PowerSpinnerView powerSpinnerView,powerSpinnerView1,powerSpinnerView2;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,10 +65,40 @@ public class Tab1_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_tab1_, container, false);
 
+        powerSpinnerView = root.findViewById(R.id.powerSpinner_States);
+        powerSpinnerView1 = root.findViewById(R.id.powerSpinner_District);
+        powerSpinnerView2 = root.findViewById(R.id.powerSpinner_Constituency);
         recyclerView = root.findViewById(R.id.candidateRecyclerView);
 
+        powerSpinnerView.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener<String>() {
+            @SuppressLint("ShowToast")
+            @Override public void onItemSelected(int oldIndex, @Nullable String oldItem, int newIndex, String newItem) {
+                Toast toast = Toast.makeText(getContext(),newItem+" selected !",Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM,0,200);
+                toast.show();
+            }
+        });
+
+        powerSpinnerView1.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener<String>() {
+            @SuppressLint("ShowToast")
+            @Override public void onItemSelected(int oldIndex, @Nullable String oldItem, int newIndex, String newItem) {
+                Toast toast = Toast.makeText(getContext(),newItem+" selected !",Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM,0,200);
+                toast.show();
+            }
+        });
+
+        powerSpinnerView2.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener<String>() {
+            @SuppressLint("ShowToast")
+            @Override public void onItemSelected(int oldIndex, @Nullable String oldItem, int newIndex, String newItem) {
+                Toast toast = Toast.makeText(getContext(),newItem+" selected !",Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM,0,200);
+                toast.show();
+            }
+        });
+
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL));
 
         Candidates = new ArrayList<>();
 

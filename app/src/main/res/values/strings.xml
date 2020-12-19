@@ -6,4 +6,28 @@
     <string name="tab_name4">Booths</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="states">
+        <item>Tamil Nadu</item>
+        <item>Kerala</item>
+        <item>Andra Pradesh</item>
+        <item>Karnataka</item>
+        <item>Telangana</item>
+    </string-array>
+
+    <string-array name="districts">
+        <item>Trichy</item>
+        <item>Chennai</item>
+        <item>Vellore</item>
+        <item>Coimbatore</item>
+        <item>Madurai</item>
+    </string-array>
+
+    <string-array name="constituency">
+        <item>Anna Nagar</item>
+        <item>Egmore</item>
+        <item>Harbour</item>
+        <item>Mylapore</item>
+        <item>Saidapet</item>
+    </string-array>
 </resources>
