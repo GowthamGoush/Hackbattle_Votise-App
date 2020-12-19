@@ -81,7 +81,7 @@ public class Recycler_Adapter_News extends RecyclerView.Adapter<Recycler_Adapter
         holder.textView3.setText(Item.getNewsProvider());
 
         Glide.with(mContext).load(Item.getImageUrl())
-                .placeholder(R.drawable.ic_launcher_background)
+                .placeholder(R.drawable.ic_tab1_bg2)
                 .into(holder.imageView);
 
     }

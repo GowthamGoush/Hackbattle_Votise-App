@@ -11,6 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="18dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_tab1_bg2"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/candidateRecyclerView"
         android:layout_width="match_parent"

@@ -76,7 +76,15 @@
             app:bt_padding="10dp"
             app:bt_titlePadding="10dp" />
 
-
     </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+    <ImageButton
+        android:id="@+id/userLogout"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_logout"
+        android:background="@null"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12dp"/>
 
 </RelativeLayout>
