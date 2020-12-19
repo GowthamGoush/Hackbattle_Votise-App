@@ -62,13 +62,18 @@ public class Tab1_Fragment extends Fragment {
 
         Candidates = new ArrayList<>();
 
-        Candidates.add(new Candidate_Profile("Name : Rangaraj","Party : Playboys","Position : Founder","Value : 5 Cr","Properties : Infinite","Cases : 9","Dummy"));
-        Candidates.add(new Candidate_Profile("Rangaraj","Playboys","Founder","Value : 5 Cr","Properties : Infinite","Cases : 9","Dummy"));
-        Candidates.add(new Candidate_Profile("Rangaraj","Playboys","Founder","Value : 5 Cr","Properties : Infinite","Cases : 9","Dummy"));
-        Candidates.add(new Candidate_Profile("Rangaraj","Playboys","Founder","Value : 5 Cr","Properties : Infinite","Cases : 9","Dummy"));
-        Candidates.add(new Candidate_Profile("Rangaraj","Playboys","Founder","Value : 5 Cr","Properties : Infinite","Cases : 9","Dummy"));
-        Candidates.add(new Candidate_Profile("Rangaraj","Playboys","Founder","Value : 5 Cr","Properties : Infinite","Cases : 9","Dummy"));
-        Candidates.add(new Candidate_Profile("Rangaraj","Playboys","Founder","Value : 5 Cr","Properties : Infinite","Cases : 9","Dummy"));
+        Candidates.add(new Candidate_Profile("Baskar. C","Male","IJK","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Mohan M.K.","Male","DMK","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Mallika Dayalan","Female","MDMK","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Geetha M","Female","DMK","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Amutha N","Female","NTK","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Venkatesan A E","Male","AIADMK","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Balaji S","Male","IND","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Babu S","Male","IND","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Sinthu S","Female","BJP","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Muthusamy M","Male","IND","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Sofilet","Female","LJSP","Info1","Info2","Info3","Dummy"));
+        Candidates.add(new Candidate_Profile("Srinivasan","Male","IND","Info1","Info2","Info3","Dummy"));
 
         adapter = new Recycler_Adapter_Candidate(Candidates,getActivity());
 

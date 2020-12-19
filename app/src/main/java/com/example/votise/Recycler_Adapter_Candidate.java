@@ -1,6 +1,8 @@
 package com.example.votise;
 
 import android.app.Activity;
+import android.app.SearchManager;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +53,20 @@ public class Recycler_Adapter_Candidate extends RecyclerView.Adapter<Recycler_Ad
                 }
             });
 
+            cardView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    Candidate_Profile candidateProfile = Frag1List.get(getAdapterPosition());
+
+                    String query = candidateProfile.getName() + " " + candidateProfile.getParty();
+
+                    Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                    intent.putExtra(SearchManager.QUERY,query);
+                    mActivity.startActivity(intent);
+                    return true;
+                }
+            });
+
         }
     }
 
@@ -72,9 +88,9 @@ public class Recycler_Adapter_Candidate extends RecyclerView.Adapter<Recycler_Ad
 
         Candidate_Profile Item = Frag1List.get(position);
 
-        holder.textView1.setText(Item.getName());
-        holder.textView2.setText(Item.getParty());
-        holder.textView3.setText(Item.getPosition());
+        holder.textView1.setText("Name : " + Item.getName());
+        holder.textView2.setText("Gender : " + Item.getGender());
+        holder.textView3.setText("Party : " + Item.getParty());
         holder.textView4.setText(Item.getInfo1());
         holder.textView5.setText(Item.getInfo2());
         holder.textView6.setText(Item.getInfo3());

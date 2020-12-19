@@ -14,7 +14,6 @@ import com.gauravk.bubblenavigation.listener.BubbleNavigationChangeListener;
 public class MainActivity2 extends AppCompatActivity {
 
     private BubbleNavigationLinearView bubbleNavigation;
-    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +21,6 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         bubbleNavigation = findViewById(R.id.bottom_navigation);
-        textView = findViewById(R.id.textView);
 
         Tab1();
 
@@ -31,17 +29,13 @@ public class MainActivity2 extends AppCompatActivity {
             public void onNavigationChanged(View view, int position) {
 
                 switch (position) {
-                    case 0: textView.setText("Tab1");
-                            Tab1();
+                    case 0: Tab1();
                             break;
-                    case 1: textView.setText("Tab2");
-                            Tab2();
+                    case 1: Tab2();
                             break;
-                    case 2: textView.setText("Tab3");
-                            Tab3();
+                    case 2: Tab3();
                             break;
-                    case 3: textView.setText("Tab4");
-                            Tab4();
+                    case 3: Tab4();
                             break;
                 }
             }

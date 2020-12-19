@@ -4,7 +4,8 @@
     android:id="@+id/candidateCard"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginHorizontal="16dp"
     android:background="@null">
 
         <RelativeLayout
@@ -73,6 +74,7 @@
                     android:layout_height="wrap_content"
                     android:padding="4dp"
                     android:text="NAME"
+                    android:textSize="12dp"
                     android:layout_below="@+id/candidateImage"
                     android:layout_centerHorizontal="true"/>
 
@@ -81,7 +83,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="PARTY"
+                    android:text="GENDER"
+                    android:textSize="12dp"
                     android:layout_below="@+id/candidateName"
                     android:layout_centerHorizontal="true"/>
 
@@ -90,7 +93,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="POSITION"
+                    android:text="PARTY"
+                    android:textSize="12dp"
                     android:layout_below="@+id/candidateParty"
                     android:layout_centerHorizontal="true"/>
 

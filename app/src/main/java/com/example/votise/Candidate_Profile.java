@@ -2,18 +2,18 @@ package com.example.votise;
 
 public class Candidate_Profile {
     private String Name;
+    private String Gender;
     private String Party;
-    private String Position;
     private String Info1;
     private String Info2;
     private String Info3;
     private String ImageUrl;
     private Boolean Expanded;
 
-    public Candidate_Profile(String name, String party, String position, String info1, String info2, String info3, String imageUrl) {
+    public Candidate_Profile(String name, String gender, String party, String info1, String info2, String info3, String imageUrl) {
         Name = name;
         Party = party;
-        Position = position;
+        Gender = gender;
         Info1 = info1;
         Info2 = info2;
         Info3 = info3;
@@ -37,12 +37,12 @@ public class Candidate_Profile {
         Party = party;
     }
 
-    public String getPosition() {
-        return Position;
+    public String getGender() {
+        return Gender;
     }
 
-    public void setPosition(String position) {
-        Position = position;
+    public void setGender(String gender) {
+        Gender = gender;
     }
 
     public String getInfo1() {
