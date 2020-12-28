@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Tab3_Fragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -12,5 +13,32 @@
         android:layout_gravity="center"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
+        android:paddingTop="100dp"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        />
+
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/powerSpinner_Language"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_spinner"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:hint="Langugage"
+        android:padding="10dp"
+        android:textColor="@color/white_93"
+        android:textColorHint="@color/white_70"
+        android:textSize="14.5sp"
+        app:spinner_arrow_gravity="end"
+        app:spinner_arrow_padding="8dp"
+        app:spinner_divider_color="@color/white_70"
+        app:spinner_divider_show="true"
+        app:spinner_divider_size="0.4dp"
+        app:spinner_item_array="@array/languages"
+        app:spinner_popup_animation="fade"
+        app:spinner_popup_background="@color/background800"
+        app:spinner_popup_elevation="14dp"
+        android:layout_marginTop="30dp"
         />
 </FrameLayout>

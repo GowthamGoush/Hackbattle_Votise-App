@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +49,9 @@ public class Recycler_Adapter_News extends RecyclerView.Adapter<Recycler_Adapter
 
                     String query = itemDetails.getNewsUrl();
 
-                    Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                    Uri uri = Uri.parse(query);
+
+                    Intent intent = new Intent(Intent.ACTION_VIEW,uri);
                     intent.putExtra(SearchManager.QUERY,query);
                     mActivity.startActivity(intent);
 

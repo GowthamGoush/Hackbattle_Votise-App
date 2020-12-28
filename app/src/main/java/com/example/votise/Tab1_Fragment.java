@@ -88,15 +88,6 @@ public class Tab1_Fragment extends Fragment {
             }
         });
 
-        powerSpinnerView2.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener<String>() {
-            @SuppressLint("ShowToast")
-            @Override public void onItemSelected(int oldIndex, @Nullable String oldItem, int newIndex, String newItem) {
-                Toast toast = Toast.makeText(getContext(),newItem+" selected !",Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.BOTTOM,0,200);
-                toast.show();
-            }
-        });
-
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL));
 
@@ -117,8 +108,16 @@ public class Tab1_Fragment extends Fragment {
 
         adapter = new Recycler_Adapter_Candidate(Candidates,getActivity());
 
-        recyclerView.setAdapter(adapter);
-
+        powerSpinnerView2.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener<String>() {
+            @SuppressLint("ShowToast")
+            @Override public void onItemSelected(int oldIndex, @Nullable String oldItem, int newIndex, String newItem) {
+                Toast toast = Toast.makeText(getContext(),newItem+" selected !",Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM,0,200);
+                toast.show();
+                recyclerView.setAdapter(adapter);
+            }
+        });
+        
         return root;
     }
 }
